@@ -1,3 +1,6 @@
+Scroll down for Polish language
+
+
 # Article to HTML Converter
 
 This project is a Python application that converts plain text articles into structured HTML format using OpenAI's GPT-4 model. It's designed to automatically identify potential places for images and create appropriate HTML placeholders with descriptive alt text.
@@ -84,7 +87,7 @@ Ten projekt to aplikacja w Pythonie, która konwertuje artykuły tekstowe na ust
 
 1. Sklonuj repozytorium:
 ```bash
-git clone <url-repozytorium>
+git clone https://github.com/gmtrk/llm_article_converter
 cd article-converter
 ```
 
