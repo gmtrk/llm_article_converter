@@ -49,7 +49,7 @@ def main():
 
     - Use appropriate HTML tags to create a well-structured layout (e.g., <h1> for titles, <p> for paragraphs, etc.).
     - Identify sections where graphics could be logically inserted and mark these locations with an <img> tag. Set the `src` attribute to "image_placeholder.jpg" and include an `alt` attribute with a descriptive prompt for generating the image. The alt text should describe the image content based on the surrounding text context.
-    - Place captions under each graphic using an appropriate HTML tag (e.g., <figcaption>).
+    - Place captions in Polish under each graphic using an appropriate HTML tag (e.g., <figcaption>). Captions should not simply translate the alt text but instead provide contextually relevant and meaningful information about each graphic in Polish.
     - The output should only contain HTML that goes inside the `<body>` section. Exclude `<html>`, `<head>`, or `<body>` tags.
     - Do not include any CSS or JavaScript code.
 

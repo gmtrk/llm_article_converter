@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sztuczna inteligencja: wpływ i wyzwania</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Typography and Layout Adjustments */
+        h1, h2, p, figure {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        /* Fade-in effect for visible elements */
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Styling for main content */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0056b3;
+        }
+        h2 {
+            font-size: 1.6em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #0073e6;
+        }
+
+        /* Paragraphs */
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Figure and Caption Styling */
+        figure {
+            margin: 25px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 80%;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            opacity: 0;
+        }
+        figure img.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        figcaption {
+            font-size: 1em;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 15px; /* Adds more space after figcaption */
+        }
+    </style>
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        // Add fade-in effect to elements as they scroll into view
+        function handleScroll() {
+            const elements = document.querySelectorAll('main, h1, h2, p, figure, figure img');
+            elements.forEach((element) => {
+                if (isInViewport(element)) {
+                    element.classList.add('fade-in');
+                }
+            });
+        }
+
+        // Run fade-in on load and on scroll
+        document.addEventListener('DOMContentLoaded', handleScroll);
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</head>
+<body>
+</body>
+</html>
